@@ -1,11 +1,18 @@
 pipeline {
-    agent any
+    agent {
+        label {
+            label "slave-1"   
+            
+        }
+        
+    }
+      
 
     stages {
         stage ('Compile Stage') {
 
             steps {
-                
+                    sh 'yum install maven -y'
                     sh 'mvn clean compile'
                 }
             
