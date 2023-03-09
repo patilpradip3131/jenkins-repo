@@ -51,7 +51,10 @@ pipeline {
                  
                 dir ("/mnt/server") {
                 sh "sudo cp -r /mnt/jenkins-slave/workspace/jenkins-repo_master/target/jenkins-example-1.0-SNAPSHOT.jar /mnt/server/apache-tomcat-9.0.73/webapps"
-                sh "sudo ./startup.sh"     
+                sh "sudo cd /mnt/server/apache-tomcat-9.0.73/bin"    
+                sh "sudo ./startup.sh"   
+                
+                  
                 }
                 
                 
