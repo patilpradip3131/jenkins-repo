@@ -50,8 +50,8 @@ pipeline {
             steps {
                  
                 dir ("/mnt/server") {
-                sh "cp -r /mnt/jenkins-slave/workspace/jenkins-repo_master/target/jenkins-example-1.0-SNAPSHOT.jar /mnt/server/apache-tomcat-9.0.73/webapps"
-                sh "./startup.sh"     
+                sh "sudo cp -r /mnt/jenkins-slave/workspace/jenkins-repo_master/target/jenkins-example-1.0-SNAPSHOT.jar /mnt/server/apache-tomcat-9.0.73/webapps"
+                sh "sudo ./startup.sh"     
                 }
                 
                 
