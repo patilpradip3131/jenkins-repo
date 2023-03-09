@@ -12,8 +12,8 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-                    sh 'yum install maven -y'
-                    sh 'mvn clean compile'
+                    sh 'sudo yum install maven -y'
+                    sh 'sudo mvn clean compile'
                 }
             
         }
@@ -22,7 +22,7 @@ pipeline {
 
             steps {
                 
-                    sh 'mvn test'
+                    sh 'sudo mvn test'
                 }
             
         }
@@ -31,7 +31,7 @@ pipeline {
         stage ('Install Stage') {
             steps {
                 
-                    sh 'mvn install'
+                    sh 'sudo mvn install'
                 }
             
         }
